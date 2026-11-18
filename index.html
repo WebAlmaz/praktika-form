@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Заказ свежей малины" />
+    <title>Malina Order Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="order-card" aria-labelledby="page-title">
+      <div class="berry berry-one" aria-hidden="true">●</div>
+      <div class="berry berry-two" aria-hidden="true">●</div>
+      <header class="card-header">
+        <p class="eyebrow">Свежий урожай</p>
+        <h1 id="page-title">Заказ малины</h1>
+        <p>Сладкая, ароматная и бережно собранная для вас.</p>
+      </header>
+      <form id="order-form" novalidate>
+        <label class="field" for="name"><span>Ваше имя</span><input id="name" name="name" type="text" autocomplete="name" placeholder="Например, Айдана" /></label>
+        <label class="field" for="phone"><span>Ваш телефон</span><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+996 555 123 456" /></label>
+        <label class="field" for="weight"><span>Выберите вес</span><select id="weight" name="weight"><option value="0.5">0.5 кг</option><option value="1" selected>1 кг</option><option value="5">5 кг</option><option value="10">10 кг</option></select></label>
+        <section class="total" aria-live="polite" aria-label="Итоговая сумма"><span>Итоговая сумма</span><output id="total-price" for="weight">1 000 сом</output><small>Доставка обсуждается при оформлении</small></section>
+        <button class="order-button" type="submit">Заказать в WhatsApp <span aria-hidden="true">↗</span></button>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
